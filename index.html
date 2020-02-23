@@ -1,48 +1,32 @@
 <html>
-
   <head>
-
     <meta charset="UTF-8">
-
-    <title>Audio samples from DSN-VC</title>
+    <title>基于深度变分信息瓶颈和语音后验概率图的任意对任意语音转换样音</title>
 
 
 
   </head>
-
   <body>
-
     <article>
-
       <header>
-
-        <h1>Audio samples from "DSN-VC: One-Shot Voice Conversion by Disentangling Representations with Domain Separation Networks"</h1>
-
+        <h1>基于深度变分信息瓶颈和语音后验概率图的任意对任意语音转换样音</h1>
       </header>
-
     </article>
-
-
 
    
 
-    <div><b>Authors:</b> Siyi Zhou, Minchuan Chen, Yi Xu, Jun Ma, Shaojun Wang, Jing Xiao</div>
-
-    <div><b>Abstract:</b> Most previous works on voice conversion (VC) require either parallel corpora or sufficient training data from target speakers. 
-
-      In this paper, we propose DSN-VC, 
-
-      a one-shot voice conversion model which can perform VC from an arbitrary source speaker to an arbitrary target speaker, 
-
-      and both the source and target speakers do not need to be seen during the training stage. 
-
-      The speaker identities and content representations are disentangled by domain separation networks (DSN). 
-
-      In our proposed model, the content encoder is trained to capture the speaker-independent content representations by a gradient reversal layer and the speaker encoder is used to capture the speaker-specific representations. 
-
-      A phoneme recognition module is introduced to ensure that the valid content information is preserved. 
-
-      Our experiment demonstrates that the proposed DSN-VC model can achieve better results compared with the baseline.</div>
+    <div><b>作者:</b> 周思逸</div>
+    <div><b>摘要:</b>目前大多数基于非并行语料的语音转换方法在转换阶段目标说话人只能是训练集中出现过的说话人，
+      为了突破这一局限任意对任意语音转换是近段时间的研究热点。本文提出了一个端到端的基于深度信息变分瓶颈和语音后验概率图的任意对任意语音转换模型，
+      它能实现源说话人到目标说话人的语音转换且源和目标说话人可以是训练时从未出现过的说话者。语音中包含最重要的信息就是语义内容信息和说话人音色信息，
+      任意对任意语音转换工作的关键就是如何将内容与音色分离表示。本文利用语音后验概率图作为与说话人无关的文本表示，
+      并利用基于深度变分信息瓶颈的工作模式来提取说话人的音色表示。语音后验概率图是通过一个预先训练好的与说话人无关的自动语音识别系统来提取的，
+      本文将提取语音后验概率图的网络与转换模型联合起来一起训练。为了提高模型的泛化能力并避免下游任务对语音后验概率图的质量造成不良影响，
+      本文利用梯度反转层将声学特征映射到一个不包含说话人信息的公共空间中，再将这个公共空间中的特征映射到语音后验概率图。
+      深度变分信息瓶颈教会神经网络在表示说话人音色特征时遗忘一些无用的保留最有效与目标最相关的信息。
+      最后，本文详细说明了模型的网络结构以及相关参数设置并采用TIMIT公开数据集进行了相关实验，
+      实验结果表明本模型所提的任意对任意语音转换解决方案是具有一定可行性的。
+</div>
 
     
 
